@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant app</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <a href="#hero" class="skip-content"> skip to content </a>
+    <header>
+        <div class="topbar">
+            <button id="mobile-menu-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    style="fill: rgba(0, 0, 0, 1)">
+                    <path d="M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z"></path>
+                </svg>
+            </button>
+            <h1>SomeBrand</h1>
+            <nav>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Favourite</a></li>
+                    <li><a href="">About me</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="circular-container-absolute top-right">
+            <div class="circular-container">
+                <div class="circle-1"></div>
+                <div class="circle-2"></div>
+                <div class="circle-3"></div>
+                <div class="circle-4"></div>
+            </div>
+        </div>
+        <div class="circular-container-absolute bottom-left">
+            <div class="circular-container">
+                <div class="circle-1"></div>
+                <div class="circle-2"></div>
+                <div class="circle-3"></div>
+                <div class="circle-4"></div>
+            </div>
+        </div>
+        <div class="" id="hero" tabindex="0">
+            <h2>Home</h2>
+            <p>
+                checkout every <span>Restaurant</span> available from dicoding api !
+            </p>
+            <a href="#main">Explore now</a>
+        </div>
+        <img src="mouse-down.svg" alt="" id="mouse-down-icon" />
+    </header>
+
+    <main id="main">
+        <div class="circular-container-absolute top-right">
+            <div class="circular-container">
+                <div class="circle-1"></div>
+                <div class="circle-2"></div>
+                <div class="circle-3"></div>
+                <div class="circle-4"></div>
+            </div>
+        </div>
+
+        <form action="">
+            <label for="search-input">Search:</label>
+            <input type="text" id="search-input" placeholder="Search by city, name..." />
+        </form>
+
+        <div id="restaurant-list">
+            <section class="card" tabindex="0" aria-label="Restaurant Card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/1200" aria-label="Restaurant Card" loading="lazy" />
+                    <div class="low-brightess-layer"></div>
+                    <h3><a href="#">Pizza Place</a></h3>
+                </div>
+                <div class="card-body">
+                    <p>
+                        <span>3.7 <i class="bx bxs-star"></i></span>
+                        <span>Kota medan</span>
+                    </p>
+                    <p class="description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id sunt
+                        distinctio exercitationem labore, perferendis nam dolor est. Odit
+                        qui minus rerum architecto expedita iure deserunt culpa sunt est!
+                        Labore, iste!
+                    </p>
+                </div>
+            </section>
+            <section class="card" tabindex="0" aria-label="Restaurant Card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/1200" aria-label="Restaurant Card" loading="lazy" />
+                    <div class="low-brightess-layer"></div>
+                    <h3><a href="#">Pizza Place</a></h3>
+                </div>
+                <div class="card-body">
+                    <p>
+                        <span>3.7 <i class="bx bxs-star"></i></span>
+                        <span>Kota medan</span>
+                    </p>
+                    <p class="description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id sunt
+                        distinctio exercitationem labore, perferendis nam dolor est. Odit
+                        qui minus rerum architecto expedita iure deserunt culpa sunt est!
+                        Labore, iste!
+                    </p>
+                </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div id="footer-top">
+            <div id="about-me">
+                <h4>About Us</h4>
+                <p>im a undergraduate student from state unvirsity of medan, trying to master the art of frontend web development, also a lactose tolerant person!</p>
+            </div>
+            <div id="contact">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>+62 877 9478 2703</li>
+                    <li>fahrurrzy4214@gmail.com</li>
+                </ul>
+            </div>
+            <div id="social-link">
+                <h4>Social Media</h4>
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class='bx bxl-github'></i>
+                            Fhrrrzy___
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class='bx bxl-linkedin' ></i>
+                            Fahrurozi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class='bx bxl-instagram' ></i>
+                            @fhrrryz___
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="footer-bottom">
+            <p>Copyright © 2023 - all right reserved | this web is made by fahruraji</p>
+        </div>
+    </footer>
+
+    <div class="" id="drawer-nav" aria-label="Navigation Drawer">
+        <div class="list-container">
+            <i class="bx bx-x" id="close-drawer" role="button" tabindex="0" aria-haspopup="true"
+                aria-expanded="false"></i>
+            <ul role="navigation">
+                <li><a href="">Home</a></li>
+                <li><a href="">Favourite</a></li>
+                <li><a href="">About me</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const closeDrawerButton = document.getElementById("close-drawer");
+        const drawer = document.getElementById("drawer-nav");
+
+        document.addEventListener("DOMContentLoaded", () => {
+            mobileMenuButton.addEventListener("click", openDrawer);
+            closeDrawerButton.addEventListener("click", closeDrawer);
+        });
+
+        window.addEventListener("scroll", function () {
+            const mouseDownIcon = document.getElementById("mouse-down-icon");
+            const scrollPosition = window.scrollY;
+
+            // Specify the scroll position at which you want to hide the mouse icon
+            const hidePosition = 100; // Adjust this value as needed
+
+            if (scrollPosition >= hidePosition) {
+                mouseDownIcon.style.opacity = "0";
+                mouseDownIcon.style.transitionDuration = "800ms";
+            } else {
+                mouseDownIcon.style.opacity = "0.5";
+                mouseDownIcon.style.transitionDuration = "800ms";
+            }
+        });
+
+        const openDrawer = () => {
+            drawer.style.transform = "translateX(0)";
+            document.documentElement.style.overflow = "hidden";
+        };
+
+        const closeDrawer = () => {
+            drawer.style.transform = "translateX(-100%)";
+            document.documentElement.style.overflow = "auto";
+        };
+    </script>
+</body>
+
+</html>
