@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant app</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <a href="#hero" class="skip-content"> skip to content </a>
+    <header>
+        <div class="topbar">
+            <button id="mobile-menu-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    style="fill: rgba(0, 0, 0, 1)">
+                    <path d="M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z"></path>
+                </svg>
+            </button>
+            <div class="" id="drawer-nav" aria-label="Navigation Drawer">
+                <div class="list-container">
+                    <i class="bx bx-x" id="close-drawer" role="button" tabindex="0" aria-haspopup="true"
+                        aria-expanded="false"></i>
+                    <ul role="navigation">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Favourite</a></li>
+                        <li><a href="">About me</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h1>SomeBrand</h1>
+            <nav>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Favourite</a></li>
+                    <li><a href="">About me</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="circular-container-absolute top-right">
+            <div class="circular-container">
+                <div class="circle-1"></div>
+                <div class="circle-2"></div>
+                <div class="circle-3"></div>
+                <div class="circle-4"></div>
+            </div>
+        </div>
+        <div class="circular-container-absolute bottom-left">
+            <div class="circular-container">
+                <div class="circle-1"></div>
+                <div class="circle-2"></div>
+                <div class="circle-3"></div>
+                <div class="circle-4"></div>
+            </div>
+        </div>
+        <div class="" id="hero" tabindex="0">
+            <h2>Detail</h2>
+        </div>
+        <img src="mouse-down.svg" alt="" id="mouse-down-icon" />
+    </header>
+
+    <main id="main">
+        <div class="circular-container-absolute top-right">
+            <div class="circular-container">
+                <div class="circle-1"></div>
+                <div class="circle-2"></div>
+                <div class="circle-3"></div>
+                <div class="circle-4"></div>
+            </div>
+        </div>
+
+        <div id="restaurant-detail">
+            <div id="restaurant-image" tabindex="0">
+                <img src="https://picsum.photos/800" alt="">
+            </div>
+            <div id="restaurant-name" tabindex="0">
+                <h3>Fredbear pizzeria</h3>
+            </div>
+            <div id="restaurant-rating-city" tabindex="0">
+                <div class="">
+                    <span>3.8</span>
+                    <span> - </span>
+                    <span>Medan, Jln. Pandeglang no 19</span>
+                </div>
+            </div>
+            <div id="restaurant-description" tabindex="0">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic nihil sed nemo doloremque reprehenderit at pariatur obcaecati suscipit. Natus, repellendus neque. Omnis incidunt numquam cumque quo eius officiis eum ut?
+            </div>
+            <div id="restaurant-menu" tabindex="0">
+                <h4>Menu</h4>
+                <div class="menu-container">
+                    <div class="food-container">
+                        <h5>Food</h5>
+                        <ul>
+                            <li>Bakso</li>
+                            <li>Bakso</li>
+                            <li>Bakso</li>
+                            <li>Bakso</li>
+                            <li>Bakso</li>
+                        </ul>
+                    </div>
+                    <div class="drink-container">
+                        <h5>Drink</h5>
+                        <ul>
+                            <li>jus</li>
+                            <li>jus</li>
+                            <li>jus</li>
+                            <li>jus</li>
+                            <li>jus</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="restaurant-review" tabindex="0">
+                <h4>Review</h4>
+                <form action="">
+                    <div class="form-group">
+                        <label for="">Nama</label>
+                        <input type="text" placeholder="masukan nama anda">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Comment</label>
+                        <textarea name="" id="" cols="30" rows="10"  placeholder="masukan komentar anda"></textarea>
+                    </div>
+                    <button>Submit</button>
+                </form>
+                <ul>
+                    <li tabindex="0">
+                        <div class="review-name">Ahmad</div>
+                        <div class="review-date">12 january 2021</div>
+                        <div class="review-comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam soluta ea, recusandae beatae tenetur excepturi sapiente ex enim mollitia incidunt ad, necessitatibus voluptatibus temporibus inventore consequatur rerum minus voluptates quia!</div>
+                    </li>
+                    <li tabindex="0">
+                        <div class="review-name">Ahmad</div>
+                        <div class="review-date">12 january 2021</div>
+                        <div class="review-comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam soluta ea, recusandae beatae tenetur excepturi sapiente ex enim mollitia incidunt ad, necessitatibus voluptatibus temporibus inventore consequatur rerum minus voluptates quia!</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <div id="like-container">
+        <button id="like-button">
+            <i class='bx bx-heart'></i>
+        </button>
+        <button id="unlike-button">
+            <i class='bx bxs-heart' ></i>
+        </button>
+    </div>
+
+    <footer tabindex="0">
+        <div id="footer-top">
+            <div id="about-me">
+                <h4>About Us</h4>
+                <p>im a undergraduate student from state unvirsity of medan, trying to master the art of frontend web development, also a lactose tolerant person!</p>
+            </div>
+            <div id="contact">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>+62 877 9478 2703</li>
+                    <li>fahrurrzy4214@gmail.com</li>
+                </ul>
+            </div>
+            <div id="social-link">
+                <h4>Social Media</h4>
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class='bx bxl-github'></i>
+                            Fhrrrzy___
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class='bx bxl-linkedin' ></i>
+                            Fahrurozi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class='bx bxl-instagram' ></i>
+                            @fhrrryz___
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="footer-bottom">
+            <p>Copyright © 2023 - all right reserved | this web is made by fahruraji</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const closeDrawerButton = document.getElementById("close-drawer");
+        const drawer = document.getElementById("drawer-nav");
+
+        document.addEventListener("DOMContentLoaded", () => {
+            mobileMenuButton.addEventListener("click", openDrawer);
+            closeDrawerButton.addEventListener("click", closeDrawer);
+        });
+
+        window.addEventListener("scroll", function () {
+            const mouseDownIcon = document.getElementById("mouse-down-icon");
+            const scrollPosition = window.scrollY;
+
+            // Specify the scroll position at which you want to hide the mouse icon
+            const hidePosition = 100; // Adjust this value as needed
+
+            if (scrollPosition >= hidePosition) {
+                mouseDownIcon.style.opacity = "0";
+                mouseDownIcon.style.transitionDuration = "800ms";
+            } else {
+                mouseDownIcon.style.opacity = "0.5";
+                mouseDownIcon.style.transitionDuration = "800ms";
+            }
+        });
+
+        const openDrawer = () => {
+            drawer.style.display = "flex";
+            drawer.style.transform = "translateX(0)";
+            document.documentElement.style.overflow = "hidden";
+        };
+
+        const closeDrawer = () => {
+            drawer.style.transform = "translateX(-100%)";
+            setTimeout(() => {
+                drawer.style.display = "none";
+            }, 400);
+            document.documentElement.style.overflow = "auto";
+        };
+    </script>
+</body>
+
+</html>

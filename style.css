@@ -9,8 +9,8 @@
   font-family: "Poppins", sans-serif;
 }
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -40,13 +40,13 @@ header {
   z-index: 99999999;
 }
 
-.topbar nav ul{
+.topbar nav ul {
   display: flex;
   gap: 2rem;
   list-style: none;
 }
 
-.topbar nav ul li a{
+.topbar nav ul li a {
   text-decoration: none;
   color: #373737;
   position: relative;
@@ -95,7 +95,6 @@ header {
   width: 100%;
 }
 
-
 .circular-container-absolute {
   position: absolute;
 }
@@ -133,25 +132,29 @@ header {
 
 .circle-1 {
   --circle-size: 6rem;
-  animation: popup-circle 1s ease-out calc(100ms * 1) 1 forwards;
+  animation: expand-circle 2s ease-out calc(100ms * 1) 1 forwards,
+    throbbing-circle 5s ease-in 2.3s infinite;
   opacity: 0.2;
 }
 
 .circle-2 {
   --circle-size: 12rem;
-  animation: popup-circle 1s ease-out calc(100ms * 2) 1 forwards;
+  animation: expand-circle 2s ease-out calc(100ms * 2) 1 forwards,
+    throbbing-circle 5s ease-in 2.5s infinite;
   opacity: 0.15;
 }
 
 .circle-3 {
   --circle-size: 18rem;
-  animation: popup-circle 1s ease-out calc(100ms * 3) 1 forwards;
+  animation: expand-circle 2s ease-out calc(100ms * 3) 1 forwards,
+    throbbing-circle 5s ease-in 2.7s infinite;
   opacity: 0.1;
 }
 
 .circle-4 {
   --circle-size: 24rem;
-  animation: popup-circle 1s ease-out calc(100ms * 4) 1 forwards;
+  animation: expand-circle 2s ease-out calc(100ms * 4) 1 forwards,
+    throbbing-circle 5s ease-in 2.8s infinite;
   opacity: 0.05;
 }
 
@@ -176,13 +179,24 @@ header {
   }
 }
 
-@keyframes popup-circle {
+@keyframes expand-circle {
   0% {
     width: 0;
   }
 
   100% {
     width: calc(var(--circle-size) + 2 * 10px);
+  }
+}
+
+@keyframes throbbing-circle {
+  0%,
+  100% {
+    width: calc(var(--circle-size) + 2 * 10px);
+  }
+
+  50% {
+    width: calc(var(--circle-size) - 10px);
   }
 }
 
@@ -242,18 +256,22 @@ header {
   border: 2px antiquewhite solid;
 }
 
-main{
+main {
   position: relative;
   overflow: hidden;
   padding: 1rem;
 }
 
-main form{
+main form {
   width: 100%;
   padding: 1rem;
 }
 
-main form input{
+.form-group{
+  margin-bottom: 10px;
+}
+
+main form input, main form textarea {
   display: block;
   width: 100%;
   margin: 0px auto;
@@ -264,14 +282,31 @@ main form input{
   background-color: rgba(250, 235, 215, 0.2);
 }
 
-main #restaurant-list{
+main form button{
+  background-color: antiquewhite;
+  border : none;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  transition: all 150ms ease-in-out;
+  margin-bottom: 2rem;
+}
+
+main form button:hover{
+  background-color: var(--bolder-antique);
+  color: white;
+}
+
+
+main #restaurant-list {
   overflow: hidden;
   padding: 1rem;
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
-
 
 main #restaurant-list section {
   width: 100%;
@@ -288,7 +323,7 @@ main #restaurant-list section {
   position: relative;
   overflow: hidden;
   transform: scale(1.01);
-  border-radius: 10px;
+  border-radius: 0;
   margin-bottom: 10px;
 }
 
@@ -345,7 +380,7 @@ main #restaurant-list section {
 }
 
 .card-body {
-  padding: 5px;
+  padding: 10px 20px;
 }
 
 .card-body p {
@@ -387,11 +422,11 @@ main #restaurant-list section {
   overflow: hidden;
 }
 
-footer{
-    background-color: #191d21;
+footer {
+  background-color: #191d21;
 }
 
-#footer-top{
+#footer-top {
   padding: 20px 30px;
   border-bottom: 1px #494949 solid;
   display: grid;
@@ -399,29 +434,29 @@ footer{
   gap: 2rem;
 }
 
-#footer-top h4{
+#footer-top h4 {
   color: white;
   margin-bottom: 0px;
 }
 
-#footer-top p{
+#footer-top p {
   color: rgb(165, 165, 165);
   font-size: small;
 }
 
-#footer-top #contact ul{
+#footer-top #contact ul {
   color: rgb(165, 165, 165);
   font-size: small;
   padding-left: 20px;
 }
 
-#footer-top #social-link ul{
+#footer-top #social-link ul {
   color: rgb(165, 165, 165);
   list-style-type: none;
   padding: 0;
 }
 
-#footer-top #social-link ul li a{
+#footer-top #social-link ul li a {
   color: rgb(165, 165, 165);
   text-decoration: none;
   justify-items: center;
@@ -431,56 +466,56 @@ footer{
   transition: all 150ms ease-in-out;
 }
 
-
-#footer-top #social-link ul li a:hover{
+#footer-top #social-link ul li a:hover {
   color: white;
 }
 
-#footer-top #social-link ul li a i{
-  margin: auto 0
+#footer-top #social-link ul li a i {
+  margin: auto 0;
 }
 
-#footer-bottom{
+#footer-bottom {
   padding: 0.5rem 1rem;
   color: white;
   font-size: small;
   text-align: center;
 }
 
-#drawer-nav{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    padding: 0 100px;
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    border-radius: 0px 30px 30px 0px;
-    transform: translateX(-100%);
-    transition: all 300ms ease-in-out;
-  }
-
-.list-container{
-    display: relative;
+#drawer-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  padding: 0 100px;
+  background-color: #fff;
+  display: hidden;
+  justify-content: center;
+  border-radius: 0px 15px 15px 0px;
+  transform: translateX(-100%);
+  transition: all 300ms ease-in-out;
+  z-index: 999999999;
 }
 
-#drawer-nav .list-container ul{
-    margin: 30% 0;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+.list-container {
+  display: relative;
+}
+
+#drawer-nav .list-container ul {
+  margin: 30% 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 #drawer-nav .list-container ul li a {
-    text-decoration: none;
-    color:#494949;
-    font-size: 2rem;
-    font-weight: bold;
-    transition: all 150ms ease-in-out;
-    position: relative;
+  text-decoration: none;
+  color: #525252;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: all 0.3s ease-out;
+  position: relative;
 }
 
 #drawer-nav .list-container ul li a::after {
@@ -491,33 +526,153 @@ footer{
   bottom: -25%;
   left: 0px;
   border-radius: 20px 20px 20px 20px;
-  background: rgb(0, 0, 0);
+  background: #888888;
   transition: all 0.3s ease-out;
 }
 
 #drawer-nav .list-container ul li:hover a::after {
-    color : var(--bolder-antique);
-    width: 50%;
+  background: black;
+  width: 50%;
 }
 
-#close-drawer{
+#drawer-nav .list-container ul li:hover a {
+  color: black;
+  width: 50%;
+}
+
+#close-drawer {
   position: absolute;
   top: 20px;
   right: 20px;
   color: #494949;
-  font-size:xx-large;
+  font-size: xx-large;
   background-color: transparent;
-  border:none;
+  border: none;
   cursor: pointer;
 }
 
-label[for="search-input"]{
-  font-weight: 500; 
+#restaurant-detail {
+  padding: 0;
 }
 
+#restaurant-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+#restaurant-name {
+  padding: 0 10px;
+  font-size: 1.5rem;
+}
+
+#restaurant-name h3 {
+  margin: 0px;
+  padding: 0px;
+}
+
+#restaurant-rating-city {
+  padding: 0 10px;
+  margin-bottom: 1rem;
+  color: #373737;
+}
+
+#restaurant-description {
+  padding: 0 10px;
+  margin-bottom: 4rem;
+}
+
+#restaurant-menu {
+  padding: 0 10px;
+}
+
+#restaurant-menu h4 {
+  text-align: center;
+  font-size: larger;
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 1px #191d21 solid;
+}
+
+#restaurant-menu h5 {
+  color: #494949;
+  font-size: medium;
+}
+
+#restaurant-menu .menu-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#restaurant-menu .menu-container ul {
+  list-style-type: circle;
+}
+
+#restaurant-review h4 {
+  text-align: center;
+  font-size: larger;
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 1px #191d21 solid;
+}
+
+#restaurant-review ul {
+  display: grid;
+  list-style-type: none;
+  padding: 0 10px;
+  margin: 0;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+#restaurant-review ul li {
+  border : 1px #c4c4c4 solid;
+  background-color: rgb(251, 248, 244);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+#restaurant-review ul li .review-name{
+  font-weight: 600;
+}
+
+#restaurant-review ul li .review-date{
+  font-size: small;
+  margin-bottom: 10px;
+}
+
+#restaurant-review ul li .review-comment{
+  font-size: 0.9rem;
+}
+
+#like-container{
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+}
+
+#like-container button{
+  padding: 20px;
+  background-color: var(--bolder-antique);
+  border: none;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 9999px;
+  transition: all 150ms ease-in-out;
+}
+
+#like-container button:hover{
+  box-shadow: 1px 1px 35px #c9c9c9;
+  transform: translateY(-10px);
+}
+
+#like-container button i{
+  font-size: xx-large;
+}
 
 @media (min-width: 768px) {
-  main #restaurant-list{
+  main #restaurant-list {
     position: relative;
     overflow: hidden;
     padding: 1rem;
@@ -528,29 +683,33 @@ label[for="search-input"]{
 
   .circle-1 {
     --circle-size: 9rem;
-    animation: popup-circle 1s ease-out calc(100ms * 1) 1 forwards;
+    animation: expand-circle 2s ease-out calc(100ms * 1) 1 forwards,
+      throbbing-circle 5s ease-in 2.3s infinite;
     opacity: 0.2;
   }
-  
+
   .circle-2 {
     --circle-size: 18rem;
-    animation: popup-circle 1s ease-out calc(100ms * 2) 1 forwards;
+    animation: expand-circle 2s ease-out calc(100ms * 2) 1 forwards,
+      throbbing-circle 5s ease-in 2.5s infinite;
     opacity: 0.15;
   }
-  
+
   .circle-3 {
     --circle-size: 27rem;
-    animation: popup-circle 1s ease-out calc(100ms * 3) 1 forwards;
+    animation: expand-circle 2s ease-out calc(100ms * 3) 1 forwards,
+      throbbing-circle 5s ease-in 2.7s infinite;
     opacity: 0.1;
   }
-  
+
   .circle-4 {
     --circle-size: 36rem;
-    animation: popup-circle 1s ease-out calc(100ms * 4) 1 forwards;
+    animation: expand-circle 2s ease-out calc(100ms * 4) 1 forwards,
+      throbbing-circle 5s ease-in 2.8s infinite;
     opacity: 0.05;
   }
 
-  #hero a{
+  #hero a {
     width: 50%;
   }
 
@@ -567,11 +726,11 @@ label[for="search-input"]{
     display: block;
   }
 
-  .topbar #mobile-menu-button{
-    display: none ;
+  .topbar #mobile-menu-button {
+    display: none;
   }
 
-  main form{
+  main form {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -580,16 +739,15 @@ label[for="search-input"]{
     justify-content: end;
   }
 
-  #footer-top{
+  #footer-top {
     background-color: #191d21;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-
 }
 
 @media (min-width: 1200px) {
-  main #restaurant-list{
+  main #restaurant-list {
     position: relative;
     overflow: hidden;
     padding: 1rem;
@@ -600,25 +758,29 @@ label[for="search-input"]{
 
   .circle-1 {
     --circle-size: 11rem;
-    animation: popup-circle 1s ease-out calc(100ms * 1) 1 forwards;
+    animation: expand-circle 2s ease-out calc(100ms * 1) 1 forwards,
+      throbbing-circle 5s ease-in 2.3s infinite;
     opacity: 0.2;
   }
-  
+
   .circle-2 {
     --circle-size: 22rem;
-    animation: popup-circle 1s ease-out calc(100ms * 2) 1 forwards;
+    animation: expand-circle 2s ease-out calc(100ms * 2) 1 forwards,
+      throbbing-circle 5s ease-in 2.5s infinite;
     opacity: 0.15;
   }
-  
+
   .circle-3 {
     --circle-size: 33rem;
-    animation: popup-circle 1s ease-out calc(100ms * 3) 1 forwards;
+    animation: expand-circle 2s ease-out calc(100ms * 3) 1 forwards,
+      throbbing-circle 5s ease-in 2.7s infinite;
     opacity: 0.1;
   }
-  
+
   .circle-4 {
     --circle-size: 44rem;
-    animation: popup-circle 1s ease-out calc(100ms * 4) 1 forwards;
+    animation: expand-circle 2s ease-out calc(100ms * 4) 1 forwards,
+      throbbing-circle 5s ease-in 2.8s infinite;
     opacity: 0.05;
   }
 }
