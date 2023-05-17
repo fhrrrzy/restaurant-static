@@ -647,8 +647,8 @@ footer {
 
 #like-container{
   position: fixed;
-  bottom: 10%;
-  right: 10%;
+  bottom: 4%;
+  right: 1%;
 }
 
 #like-container button{
@@ -731,13 +731,25 @@ footer {
   }
 
   main form {
+    margin : 0px auto;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    width: 20%;
+    width: 50%;
     padding: 1rem;
     justify-content: end;
   }
+
+
+  #restaurant-detail {
+    padding: 0 4rem;
+  }
+
+  #restaurant-review ul li {
+    width: 50%;
+    margin : 0px auto;
+  }
+  
 
   #footer-top {
     background-color: #191d21;
